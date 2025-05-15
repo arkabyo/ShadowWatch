@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shadow Watch - 2FA</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gray-100 flex items-center justify-center">
+  <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+    <h2 class="text-2xl font-semibold mb-4 text-center">2FA Verification</h2>
+    <p class="text-sm text-gray-600 mb-6 text-center">
+      Enter the 6‑digit code from Google Authenticator.
+    </p>
+
+    <form method="POST" action="/original/mfa" class="space-y-4">
+      <div>
+        <label class="block text-sm font-medium">Authenticator Code</label>
+        <input name="token" required
+          class="mt-1 w-full px-3 py-2 border rounded focus:outline-none focus:ring" />
+      </div>
+      <button type="submit"
+        class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
+        Verify
+      </button>
+    </form>
+  </div>
+</body>
+</html>
