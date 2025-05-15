@@ -22,7 +22,7 @@ app.set("views", path.join(__dirname, "views"));
 
 // Route registration
 app.use("/original", require("./routes/original"));
-app.use("/fake", require("./routes/fake")); // optional, for your phishing route
+// app.use("/fake", require("./routes/fake")); // optional, for your phishing route
 
 // Start server
 // app.listen(3000, () => {
