@@ -25,6 +25,10 @@ app.use("/original", require("./routes/original"));
 app.use("/fake", require("./routes/fake")); // optional, for your phishing route
 
 // Start server
-app.listen(3000, () => {
-  console.log("Server running at http://localhost:3000");
+// app.listen(3000, () => {
+//   console.log("Server running at http://localhost:3000");
+// });
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Listening on port ${PORT}`);
 });
